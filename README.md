@@ -21,11 +21,9 @@ Go to http://0.0.0.0:5000/shape/doc
 
 Or you can run in your terminal
 ```bash
-curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{ \ 
-   "subject": "Email subject", \ 
-   "content": "Email body", \ 
-   "timestamp": "07 Feb 2018 00:06 +08", \ 
-   "recipients": "user1%40mail.com, user2%40mail.com" \ 
- }' 'http://127.0.0.1:5000/api/save_emails'
- ```
+curl -X POST "http://0.0.0.0:5000/shape/detect" 
+-H "accept: application/json" 
+-H "Content-Type: application/json" 
+-d "{ \"lines\" : [\"(1,1),(2,2)\",\"(3,3),(2,2)\",\"(4,4),(3,3)\",\"(1,1),(4,4)\",\"(7,7),(8,8)\",\"(8,8),(9,9)\",\"(9,9),(7,7)\"]}"
+```
  
