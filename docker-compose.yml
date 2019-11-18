@@ -1,0 +1,17 @@
+version: '3'
+services:
+  app:
+    build: .
+    command: python -m flask run --host 0.0.0.0 --port 5000
+    container_name: Shape_Detector
+    env_file:
+      - .env
+    environment:
+      - FLASK_APP=serve.py
+      - FLASK_DEBUG=${FLASK_DEBUG}
+      - APP_SETTINGS=${APP_SETTINGS}
+      - SECRET_KEY=${SECRET_KEY}
+    ports:
+      - '5000:5000'
+    volumes:
+      - .:/var/www/shape_detector
