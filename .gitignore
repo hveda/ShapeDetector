@@ -53,8 +53,9 @@ coverage.xml
 
 # Django stuff:
 *.log
+.static_storage/
+.media/
 local_settings.py
-db.sqlite3
 
 # Flask stuff:
 instance/
@@ -83,6 +84,7 @@ celerybeat-schedule
 
 # Environments
 .env
+.env.leave
 .venv
 env/
 venv/
@@ -102,3 +104,8 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Database
+*.sqlite
+*.db
+migrations/
